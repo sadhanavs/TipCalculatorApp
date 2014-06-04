@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TipCalculator</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="etAmt">Enter Amount</string>
+    <string name="btTen">10%</string>
+    <string name="btFifteen">15%</string>
+    <string name="btTwenty">20%</string>
+    <string name="tvLable">Tip is:</string>
+    <string name="tvTip">$0.0</string>
+    <string name="tvLable1">Amount</string>
+    <string name="tvAmt"></string>
+    <string name="tvLable3">Total Amount</string>
+    <string name="tvTotal"></string>
+
+</resources>

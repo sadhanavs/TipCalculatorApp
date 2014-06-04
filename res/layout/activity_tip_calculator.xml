@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${packageName}.${activityClass}" >
+
+    <EditText
+        android:id="@+id/etAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="@string/etAmt" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btTen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/etAmt"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="105dp"
+        android:onClick="onClickTen"
+        android:hint="@string/btTen" />
+
+    <Button
+        android:id="@+id/btFifteen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btTen"
+        android:layout_alignBottom="@+id/btTen"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickFifteen"
+        android:hint="@string/btFifteen" />
+
+    <Button
+        android:id="@+id/btTewnty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btFifteen"
+        android:layout_alignBottom="@+id/btFifteen"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="18dp"
+        android:onClick="onClickTwenty"
+        android:hint="@string/btTwenty" />
+
+    <TextView
+        android:id="@+id/tvLable2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btTen"
+        android:layout_marginTop="96dp"
+        android:layout_toLeftOf="@+id/btFifteen"
+        android:hint="@string/tvLable" />
+
+    <TextView
+        android:id="@+id/tvTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvLable2"
+        android:layout_alignRight="@+id/btFifteen"
+        android:hint="@string/tvTip" />
+
+    <TextView
+        android:id="@+id/tvLable1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvTip"
+        android:layout_alignRight="@+id/tvLable2"
+        android:layout_marginBottom="14dp"
+        android:hint="@string/tvLable1" />
+
+    <TextView
+        android:id="@+id/tvAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvLable1"
+        android:layout_alignBottom="@+id/tvLable1"
+        android:layout_alignLeft="@+id/tvTip"
+        android:hint="@string/tvAmt" />
+
+    <TextView
+        android:id="@+id/tvLable3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tvLable2"
+        android:layout_below="@+id/tvLable2"
+        android:layout_marginTop="26dp"
+        android:hint="@string/tvLable3" />
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvLable3"
+        android:layout_alignRight="@+id/tvAmt"
+        android:hint="@string/tvTotal" />
+
+</RelativeLayout>
