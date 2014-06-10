@@ -13,5 +13,22 @@
     <string name="tvAmt"></string>
     <string name="tvLable3">Total Amount</string>
     <string name="tvTotal"></string>
+    <string name="tvService">Service</string>
+    <string name="tvSplitAmong">Split Among</string>
+    <string name="tvNumber"></string>
+    
+    <string name="tvSplit">Split Among</string>
+    <string name="tvSplitVal">0</string>
+    <string name="tvTipPer">0%</string>
+    <string name="tvAmount">Amount</string>
+    <string name="tvAmtVal">$0.0</string>
+    <string name="tvTipPerPerson">Tip Per Person</string>
+    <string name="tvTipPerPersonVal">$0.0</string>
+    <string name="tvTotalTip">Total Tip</string>
+    <string name="tvTotalTipVal">$0.0</string>
+    <string name="tvTotalPerPerson">Total Per Person</string>
+    <string name="tvTotalPerPersonVal">$0.0</string>
+    <string name="tvTotalAmount">Total Amount</string>
+    <string name="tvTotalAmountVal">$0.0</string>
 
 </resources>

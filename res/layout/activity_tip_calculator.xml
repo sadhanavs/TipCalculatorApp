@@ -4,102 +4,161 @@
     android:layout_height="match_parent"
     tools:context="${packageName}.${activityClass}" >
 
+    <TextView
+        android:id="@+id/tvNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etAmt"
+        android:layout_centerHorizontal="true"
+        android:text="@string/tvNumber" />
+
     <EditText
         android:id="@+id/etAmt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="@string/etAmt" >
+        android:hint="@string/etAmt" />
 
-        <requestFocus />
-    </EditText>
+    <SeekBar
+        android:id="@+id/sbSplit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvNumber"
+        android:layout_marginTop="34dp"
+        android:max="10"
+        android:progress="0" />
 
-    <Button
-        android:id="@+id/btTen"
+    <TextView
+        android:id="@+id/tvSplitVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tvNumber"
+        android:layout_below="@+id/tvNumber"
+        android:text="@string/tvSplitVal" />
+
+    <TextView
+        android:id="@+id/tvSplit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/etAmt"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="105dp"
-        android:onClick="onClickTen"
-        android:hint="@string/btTen" />
+        android:layout_below="@+id/tvNumber"
+        android:text="@string/tvSplit" />
 
-    <Button
-        android:id="@+id/btFifteen"
+    <TextView
+        android:id="@+id/tvTipPer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btTen"
-        android:layout_alignBottom="@+id/btTen"
+        android:layout_above="@+id/rbService"
         android:layout_centerHorizontal="true"
-        android:onClick="onClickFifteen"
-        android:hint="@string/btFifteen" />
-
-    <Button
-        android:id="@+id/btTewnty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btFifteen"
-        android:layout_alignBottom="@+id/btFifteen"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="18dp"
-        android:onClick="onClickTwenty"
-        android:hint="@string/btTwenty" />
+        android:text="@string/tvTipPer" />
 
     <TextView
-        android:id="@+id/tvLable2"
+        android:id="@+id/tvTotalTip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btTen"
-        android:layout_marginTop="96dp"
-        android:layout_toLeftOf="@+id/btFifteen"
-        android:hint="@string/tvLable" />
+        android:layout_alignRight="@+id/tvTipPerPerson"
+        android:layout_below="@+id/tvTipPerPerson"
+        
+        android:text="@string/tvTotalTip" />
 
     <TextView
-        android:id="@+id/tvTip"
+        android:id="@+id/tvTipPerPerson"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/tvLable2"
-        android:layout_alignRight="@+id/btFifteen"
-        android:hint="@string/tvTip" />
+        android:layout_alignLeft="@+id/tvAmount"
+        android:layout_below="@+id/tvAmount"
+        
+        android:text="@string/tvTipPerPerson" />
 
     <TextView
-        android:id="@+id/tvLable1"
+        android:id="@+id/tvTotalPerPerson"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/tvTip"
-        android:layout_alignRight="@+id/tvLable2"
-        android:layout_marginBottom="14dp"
-        android:hint="@string/tvLable1" />
+        android:layout_alignRight="@+id/tvTotalTip"
+        android:layout_below="@+id/tvTotalTip"
+       
+        android:text="@string/tvTotalPerPerson" />
 
     <TextView
-        android:id="@+id/tvAmt"
+        android:id="@+id/tvAmtVal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tvLable1"
-        android:layout_alignBottom="@+id/tvLable1"
-        android:layout_alignLeft="@+id/tvTip"
-        android:hint="@string/tvAmt" />
+        android:layout_alignBottom="@+id/tvAmount"
+        android:layout_toRightOf="@+id/tvTipPer"
+        android:text="@string/tvAmtVal" />
 
     <TextView
-        android:id="@+id/tvLable3"
+        android:id="@+id/tvTipPerPersonVal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/tvLable2"
-        android:layout_below="@+id/tvLable2"
-        android:layout_marginTop="26dp"
-        android:hint="@string/tvLable3" />
+        android:layout_alignBaseline="@+id/tvTipPerPerson"
+        android:layout_alignBottom="@+id/tvTipPerPerson"
+        android:layout_alignLeft="@+id/tvAmtVal"
+        android:text="@string/tvTipPerPersonVal" />
 
     <TextView
-        android:id="@+id/tvTotal"
+        android:id="@+id/tvTotalTipVal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/tvLable3"
-        android:layout_alignRight="@+id/tvAmt"
-        android:hint="@string/tvTotal" />
+        android:layout_alignBaseline="@+id/tvTotalTip"
+        android:layout_alignBottom="@+id/tvTotalTip"
+        android:layout_alignLeft="@+id/tvTipPerPersonVal"
+        android:text="@string/tvTotalTipVal" />
+
+    <TextView
+        android:id="@+id/tvTotalPerPersonVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvTotalTipVal"
+        android:layout_below="@+id/tvTotalTipVal"
+        android:text="@string/tvTotalPerPersonVal" />
+
+    <TextView
+        android:id="@+id/tvTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tvTotalPerPerson"
+        android:layout_below="@+id/tvTotalPerPerson"
+        
+        android:text="@string/tvTotalAmount" />
+
+    <TextView
+        android:id="@+id/tvTotalAmountVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tvTotalPerPersonVal"
+        android:layout_below="@+id/tvTotalPerPersonVal"
+        android:text="@string/tvTotalAmountVal" />
+
+    <TextView
+        android:id="@+id/tvService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="@string/tvService" />
+
+    <TextView
+        android:id="@+id/tvAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rbService"
+        android:layout_marginTop="32dp"
+        android:layout_toRightOf="@+id/tvService"
+        android:text="@string/tvAmount" />
+
+    <RatingBar
+        android:id="@+id/rbService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvTotalPerPerson"
+        android:layout_below="@+id/tvService"
+        android:isIndicator="false"
+        android:rating="25.0"
+        android:stepSize="1.0" />
 
 </RelativeLayout>
